@@ -53,12 +53,13 @@
   - ✅ shadcn/ui 기반 UI 컴포넌트 설치 (Button, Badge, Card, Input 등)
   - ✅ 환경 변수 스키마 정의 (Zod 기반 `lib/env.ts`)
 
-- **Task 002: TypeScript 타입 정의 및 인터페이스 설계** - 우선순위
-  - `src/types/blog.ts` 생성 — BlogPost, NotionBlock, Category 인터페이스 정의
-  - `src/types/notion.ts` 생성 — Notion API 응답 타입 정의
-  - BlockType 유니온 타입 정의 (paragraph, heading_1/2/3, code, image 등 10가지)
-  - PostStatus 타입 정의 (`'초안' | '발행됨'`)
-  - API 응답 래퍼 타입 정의 (성공/에러 응답 형식 통일)
+- **Task 002: TypeScript 타입 정의 및 인터페이스 설계** ✅ - 완료
+  - See: `/tasks/002-typescript-types.md`
+  - ✅ `src/types/blog.ts` 생성 — BlogPost, NotionBlock, Category 인터페이스 정의
+  - ✅ `src/types/notion.ts` 생성 — Notion API 응답 타입 정의
+  - ✅ BlockType 유니온 타입 정의 (paragraph, heading_1/2/3, code, image 등 12가지)
+  - ✅ PostStatus 타입 정의 (`'초안' | '발행됨'`)
+  - ✅ API 응답 래퍼 타입 정의 (성공/에러 응답 형식 통일, `src/types/api.ts`)
 
 ### Phase 2: UI/UX 완성 (더미 데이터 활용)
 
