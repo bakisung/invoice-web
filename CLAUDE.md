@@ -2,7 +2,10 @@
 
 **개인 개발 블로그**는 Notion을 CMS로 활용하여 Notion에서 글을 작성하면 자동으로 블로그에 반영되는 개인 기술 블로그입니다.
 
-📋 상세 프로젝트 요구사항은 @/docs/PRD.md 참조
+## Project Context
+
+- PRD 문서: @docs/PRD.md
+- 개발 로드맵: @docs/ROADMAP.md
 
 ## 🛠️ 핵심 기술 스택
 
