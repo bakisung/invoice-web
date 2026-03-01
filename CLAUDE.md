@@ -1,6 +1,8 @@
 # 🤖 Claude Code 개발 지침
 
-**claude-nextjs-starters**는 Next.js 15.5.3 + React 19 기반 모던 웹 애플리케이션 스타터 템플릿입니다.
+**개인 개발 블로그**는 Notion을 CMS로 활용하여 Notion에서 글을 작성하면 자동으로 블로그에 반영되는 개인 기술 블로그입니다.
+
+📋 상세 프로젝트 요구사항은 @/docs/PRD.md 참조
 
 ## 🛠️ 핵심 기술 스택
 

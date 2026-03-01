@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
-import { ThemeProvider } from '@/components/providers/theme-provider'
 import { Toaster } from '@/components/ui/sonner'
 
 const geistSans = Geist({
@@ -15,9 +14,14 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'NextJS Starter - 모던 웹 스타터킷',
-  description:
-    'Next.js 15, TypeScript, TailwindCSS, ShadcnUI로 구축된 프로덕션 준비가 완료된 웹 애플리케이션 스타터킷',
+  title: {
+    default: process.env.NEXT_PUBLIC_BLOG_NAME ?? '개발 블로그',
+    template: `%s | ${process.env.NEXT_PUBLIC_BLOG_NAME ?? '개발 블로그'}`,
+  },
+  description: 'Notion을 CMS로 활용한 개인 기술 블로그',
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BLOG_URL ?? 'http://localhost:3000'
+  ),
 }
 
 export default function RootLayout({
@@ -26,19 +30,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ko" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-          <Toaster />
-        </ThemeProvider>
+    <html lang="ko">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {children}
+        <Toaster />
       </body>
     </html>
   )
